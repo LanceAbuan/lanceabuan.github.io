@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title> Eavesdropping and Man in the Middle</title>
+    <link rel="stylesheet"  href="styles.css">
+	<link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet"> 
+</head>
+
+<body>
+<h1 style="text-align:center">Eavesdropping and Man in the Middle</h1>
+    <p>
+        <ul>
+	    <br>
+            <li>Eavesdropping is a passive technique used by hackers to listen to network connections and record high-value information. Interception of data transmissions and other monitoring techniques may be used.</li>
+            <br>
+	    <li>The success of this attack depends on the hackers themselves not being detected or observed by anyone.</li>
+            <br>
+            <li>Man in the Middle (MITM) attacks involve intercepting the data stream between sender and recipient.</li>
+            <br>
+	    <li>The attacker establishes two connections: One between themselves and a server, another between themselves and the client. After, they can read or modify the data being passed through their connection.</li>
+            <br>
+	    <li>The goal may be to record information like exchange of login credentials or the transfer of intellectual property.</li>
+            <br>
+            <li>These unsecured networks are again the greatest gift to eavesdroppers and men in the middle. If using public Wifi, please use a VPN (Virtual Private Network) to strengeth your encyption and protect your information.</li>
+        </ul>
+        
+    </p>
+    <br>
+    <div style="text-align: center;">
+
+	<button type="myprec" id="my_button"
+	onclick="functionToExec()">Man in the middle
+	</button>
+	<button type="thanks" id="my_buttontwo"
+	onclick="functionToStop()">Normal communication
+	</button>
+	<br>
+	<br>
+	<img class="comp1" src="photos/computer.jpg" width="40" height="40" alt="monster">
+	<img class="comp2" src="photos/computer.jpg" width="40" height="40" alt="monster">
+	<img class="bal" src="photos/basketball.png" width="40" height="40" alt="monster">
+	<img class="hack" id="hacker" src="photos/hacker.jpg" width="75" height="75" alt="hacker align=middle">
+	<br>
+	
+	<script type="text/javascript">
+	document.getElementById("hacker").style.visibility = "hidden";
+	function functionToExec(){
+	document.documentElement.style.setProperty("--x","700px");
+	document.getElementById("hacker").style.visibility = "visible";
+	}
+	function functionToStop(){
+	document.documentElement.style.setProperty("--x","1200px");
+	document.getElementById("hacker").style.visibility = "hidden";
+	}
+    </script>
+    
+</div>
+</body>
+<style>
+:root{
+	--x:1200px;
+}
+.comp1{
+	position:absolute;
+	left:100px;
+}
+.comp2{
+position:absolute;
+left:1300px;
+}
+.hack{
+ position: absolute;
+ left: 700px;
+}
+
+.bal{
+    animation-duration: 5s;
+    animation-name: moving;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    position: absolute;
+}
+
+@keyframes moving {
+    0% {left: 200px;}
+	50% {left: var(--x);}
+	100% {left: 200px;}
+}
+</style>
+<br/>
+<footer>
+    <br>
+	<br>
+    <a href = "index.html">Click to go back</a>
+	<br>
+	<br>
+</footer>
+
+</html>

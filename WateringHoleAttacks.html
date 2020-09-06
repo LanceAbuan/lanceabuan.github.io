@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title> Watering Hole Attacks</title>
+    <link rel="stylesheet" href="styles.css">
+	<link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet"> 
+</head>
+
+<body>
+    <h1 style="text-align:center">Watering Hole Attacks</h1>
+    <p>
+        <ul>
+            <br>
+            <li>A watering hole is a fake wireless access point, spoofed WiFi. This allows hackers to monitor, intercept, or steal their data streams.</li>
+            <br>
+            <li>This is not always a bogus WiFi, it can be an attractive website or social media platform. A watering hole is a way to harvest data or spread a malware infection to the maximum number of devices.</li>
+            <br>
+            <li>The Virtual Private Network (VPN) remains your safest option when using any wireless access.</li> 
+        </ul>
+    </p>
+    <br>
+    <div style="text-align: center;">
+	<button type="truth" id="my_button"
+	onclick="functionToExec()" style="width:80px;height:40px;color: red;">Red Pill 
+	</button>
+	<button type="illusion" id="my_buttontwo"
+	onclick="functionToStop()"" style="width:80px;height:40px;color: blue;">Blue Pill
+    </button>
+    </div>
+    <br>
+    <br>
+    <li style="text-align:center">The Blue Pill shows animals drinking from the water hole, everything seems happy.</li>
+    <br>
+    <li style="text-align:center">The Red Pill shows a crocodile jumping up and has eaten the animals.</li>
+    <br>
+    <li style="text-align:center">This represents the hacker stealing your personal information.</li>
+									       
+    <br><br><br><br>
+	<img class="deer2" src="photos/deer2.jpg" width="100" height="100" >
+	<img class="deer" src="photos/deer.jpg" width="100" height="100" >
+	<img class="wateringhole" id="waterh" src="photos/wateringhole.png" width="100" height="100">
+	<img class="croc" id="croc" src="photos/crocodile.jpg" width="100" height="100">
+	<script type="text/javascript">
+	document.getElementById("croc").style.visibility = "hidden";
+	document.getElementById("waterh").style.visibility = "visible";
+	function functionToExec(){
+	document.documentElement.style.setProperty("--x","700px");
+	document.documentElement.style.setProperty("--x2","700px");
+	document.getElementById("croc").style.visibility = "visible";
+	document.getElementById("waterh").style.visibility = "hidden";
+	}
+	function functionToStop(){
+	document.documentElement.style.setProperty("--x","200px");
+	document.documentElement.style.setProperty("--x2","1200px");
+	document.getElementById("croc").style.visibility = "hidden";
+	document.getElementById("waterh").style.visibility = "visible";
+	}
+	</script><br><br><br><br><br><br><br><br>
+</body>
+<style>
+:root{
+	--x:200px;
+	--x2:1200px;
+}
+.deer{
+    animation-duration: 5s;
+    animation-name: moving;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    position: absolute;
+}
+.deer2{
+    animation-duration: 5s;
+    animation-name: movingtwo;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    position: absolute;
+}
+.croc{
+ position: absolute;
+ left: 700px;
+}
+.wateringhole{
+ position: absolute;
+ left: 700px;
+}
+@keyframes moving {
+    0% {left: var(--x);}
+	100% {left: 700px;}
+}
+@keyframes movingtwo {
+    0% {left:	var(--x2);}
+	100% {left:  700px;}
+}
+</style>
+
+<footer>
+    <a href = "index.html">Click to go back</a>
+</footer>
+
+</html>

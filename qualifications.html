@@ -15,10 +15,12 @@
 
 <body onload="load_all()" id="body_id" style="background-color:#000000;">
 	<!-- Below is the Navigation Bar -->
+	
 	<nav class = "navbar navbar-expand-lg navbar-dark">
 	
 		<div class="container-fluid">
 		
+			<!-- The following is the top left text which contains the auto-generated text and is a link to the home page -->
 			<a href="index.html" class = "navbar-brand d-none d-md-block" title="Click to go to the Home page">
 			.get_qualifications() | ><span class = "text-warning" id="phrase" style="font-style: italic;"></span><span id="blinker"></span>
 			</a>
@@ -47,23 +49,33 @@
 							.contact()
 						</a>
 						
-						<!-- Modal --><!-- Modal -->
+						<!-- Modal -->
 						<div class="modal fade" id="contact_modal" tabindex="-1" aria-labelledby="modal_label" aria-hidden="true" data-bs-backdrop="static" data-bs-keyboard="false">
 							<div class="modal-dialog modal-dialog-centered">
 								<div class="modal-content border-white"  style="background-color:#000000;">
 									<div class="modal-body">
 										<div class="container fluid" style="background-color:#000000;">
+											
+											<!-- Discord Contact -->
 											<div class="row p-1" style="background-color:#000000;">
-												<a class="btn btn-dark" data-bs-container="body" data-bs-toggle="popover" data-bs-placement="top" data-bs-content="Copied to clipboard!" onclick="copy_disc()" id="discord_info"> <img src="pics/discord.png" width="20"/> Discord: Lance A#1696 </a>
+											<a class="btn btn-dark" data-bs-container="body" data-bs-toggle="popover" data-bs-placement="top" data-bs-content="Copied to clipboard!" onclick="copy_disc()" id="discord_info"> <img src="pics/discord.png" width="20"/> Discord: Lance A#1696 </a>
 											</div>
 											
+											
+											<!-- LinkedIn Contact -->
 											<div class="row p-1" style="background-color:#000000;">
 												<a href="https://www.linkedin.com/in/lanceabuan/" class="btn btn-dark" target="_blank" data-bs-toggle="tooltip" data-bs-placement="top" title="Click to go to LinkedIn"> <img src="pics/linked-contact.png" width="20"/> LinkedIn </a>
-											
 											</div>
 											
+											
+											<!-- Email Contact -->
 											<div class="row p-1" style="background-color:#000000;">
 												<a href="mailto:lancejabuan@gmail.com" class="btn btn-dark" target="_blank" data-bs-toggle="tooltip" data-bs-placement="top" title="Click to send email"> <img src="pics/email-contact.jpg" width="20"/> Email lancejabuan@gmail.com </a>
+											</div>
+											
+											<!-- Phone Contact -->
+											<div class="row p-1" style="background-color:#000000;">
+												<a href="mailto:lancejabuan@gmail.com" class="btn btn-dark" target="_blank" data-bs-toggle="tooltip" data-bs-placement="top" title="Click to send email"> <img src="pics/email-contact.jpg" width="20"/> Call/Text (936) 703 - 9187 </a>
 											</div>
 											
 										</div>
@@ -74,7 +86,8 @@
 									</div>
 								</div>
 							</div>
-						</div>
+						</div>	
+						<!-- Modal End -->
 						
 						
 					</li>
@@ -102,6 +115,7 @@
 		</div>
 	</nav>
 	
+	<!-- This is the resume button -->
 	<div class="container">
 		<div class="row justify-content-center p-3">
 				<a class="btn btn-outline-danger" href="pics/resume.pdf" target="_blank">
@@ -110,30 +124,53 @@
 		</div>
 	</div>
 	
-	<div class="container fluid text-light">
+	<!-- This is the main page info -->
+	<div class="container text-light">
 		<span class="text-warning">
 			<strong>Lance is currently focusing on Software Development and Machine Learning.</strong>
 		</span> 
-		<br/><br/>He is interested in Data Analytics, Data Science, and Cyber Security.
+		<br/><br/>He is interested in Data Analytics, Data Science, and Web Development.
 		<br/>
 		<br/>
-		
-		Lance has an in-depth knowledge of multiple programming mindsets and programming languages, garnered from experience working as both a Development Lead and a Development team member in different environments.
+		Lance has an in-depth knowledge of multiple programming mindsets and programming languages, garnered from experience working as both a Lead Software Developer and a Development Team Member in different environments.
 		<br/>
 		<br/>
-		<div class="container border border-danger">
-			<ul>
-				<li> Object Oriented Analysis & Object Oriented Design</li>
-				<li> UI & UX Skills </li>
-				<li> Data Science </li>
-				<li> Database Manager </li>
-			</ul>
+		<div class="container border border-danger p-2">
+			<ol>
+				<li> <a class = "btn text-warning btn-outline-light" href="https://en.wikipedia.org/wiki/Object-oriented_programming" target="_blank"><strong>Object Oriented Analysis & Object Oriented Design </strong></a></li>
+				<ul>
+					<li> Intuitively structure heirarchys to produce optimal implementations </li>
+				</ul>
+				
+				<li> <strong class="text-warning"> UI & UX Skills  </strong></li>
+				<ul>
+					<li> The ability to create a product that both looks good and feels good to use </li>
+				</ul>
+				
+				<li> <a class="btn text-light btn-outline-light" href="https://www.oracle.com/data-science/what-is-data-science/" target="_blank"> <strong class="text-warning">  Data Science & Analysis </strong></a></li>
+				<ul>
+					<li> Observe thousands of data on multiple levels to deduce correlations between variables </li>
+				</ul>
+				
+				<li> <strong class="text-warning"> Database Manager </strong> </li>
+				<ul>
+					<li> Design secure storage systems which are quick and simple to utilize </li>
+				</ul>
+				
+				<li> <a class = "btn text-light btn-outline-light" href="https://www.atlassian.com/git/tutorials/what-is-version-control" target="_blank"><strong class="text-warning"> Version Control</strong> </a></li>
+				<ul>
+					<li> Uses Git and GitHub to effectively manage versions of a project, including working with merge conflicts </li>
+				</ul>
+				
+			</ol>
 		</div>
+		<br/>
+		Lance was orignally interested in pursuing Statistics until he took an Intro to Programming class. After being exposed to Computer Science, he wished to develop a program that would help him calculate probabilities and analyze data, and during the proccess he realized he enjoyed creating the program more than he enjoyed the Statistics. He fell in love with Software Development, however the data analysis lover within him causes Machine Learning to pique his interest.
 		<br/>
 		<br/>
 	</div>
 	
-	<!-- Below is the Card Row -->
+	<!-- Below is the Card Row, its quite simple. It contains a photo and the name of the language -->
 	<div class = "text-dark text-center">
 		<!-- Don't want things to touch the wall so we use containers -->
 		<div class="row g-0" >
@@ -193,7 +230,7 @@
 			
 			<div class= "col-sm-4 d-flex border border-warning p-1">
 				<div class="card  text-center mb-4 border-0 mx-auto" style="background-color:#000000">
-					<img src="pics/unity.png" class="card-img-top mx-auto"style=" width: 10rem; height: 9rem;background-color:#000000"></img>
+					<img src="pics/Unity.png" class="card-img-top mx-auto"style=" width: 10rem; height: 9rem;background-color:#000000"></img>
 					<div class="card-body text-light">
 						<h1 class="card-title ">Unity</h1>
 					</div>

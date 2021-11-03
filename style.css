@@ -3,6 +3,17 @@ body{
 	
 }
 
+.my_class{
+  min-height: 100vh; /* minimum height = screen height */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#main_page{
+	display:none;
+}
+
 #Courier-Prime{
 	font-family: 'Courier Prime';
 }

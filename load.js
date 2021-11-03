@@ -2,6 +2,6 @@
 async function load_all(){
 	carry_font(sessionStorage.getItem('font'));
 	typing_effect();
-	blink();
+	blink_nav();
 }
 

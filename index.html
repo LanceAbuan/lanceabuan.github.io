@@ -19,248 +19,312 @@
 </head>
 
 <body onload="index_load()" id="body_id" style="background-color:#000000;">
-	<!-- Below is the Navigation Bar -->
-	<nav class = "navbar navbar-expand-lg navbar-dark">
 	
-		<div class="container-fluid">
-			<a href="index.html" class = "navbar-brand d-none d-md-block" title="Click to go to the Home page">
-			.main() | ><span class = "text-warning" id="phrase" style="font-style: italic;"></span><span id="blinker"></span>
-			</a>
-			
-			<button class = "navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#nav_burger">
-			<span class="navbar-toggler-icon"></span>
+	<!-- In order to have the blinking "./a.out" I needed to create two screens
+		The first screen is called the loading screen, since it's like you're loading a Website.cpp program
+		When you click it, it calls the run_both() function, which runs both the create_first_time() function and then the initial_screen() function.
+		What this does is record that this is the first time it is being clicked, and then getting rid of the inital screen.
+		Afterwards, the loading_screen will not appear anymore. That is how I made the one-screen, first time entry page.
+	-->
+
+	<div id="loading_screen" role="button" class="my_class" onclick="run_both()">
+		<div class="row align-items-center">
+			<button class="col text-light btn btn-outline btn-block">
+				<h1>C:\Users\Lance Abuan\Website> <span class="text-success">./a.out<span id="loading_screen_blinker"></span></span></h1>
 			</button>
-			 
-			<div class="collapse navbar-collapse" id = "nav_burger">
+		</div>
+	</div>
+	
+	<div id="main_page">
+		<!-- Below is the Navigation Bar -->
+		<nav class = "navbar navbar-expand-lg navbar-dark">
+			<!-- The following is the top left text which contains the auto-generated text and is a link to the home page -->
+			<div class="container-fluid">
+				<a href="index.html" class = "navbar-brand d-none d-md-block" title="Click to go to the Home page">
+				.main() | ><span class = "text-warning" id="phrase" style="font-style: italic;"></span><span id="blinker" ></span>
+				</a>
 				
-				<ul class = "navbar-nav nav-tabs ms-auto">
-					<li class = "nav-item">
-						<a href="index.html" class="nav-link active text-info" aria-current="page" style="background-color:#000000;">.main()</a>
-					</li>
-					<li class = "nav-item">
-						<a href="portfolio.html" class="nav-link">.get_portfolio()</a>
-					</li>
-					<li class = "nav-item">
-						<a href="qualifications.html" class="nav-link">.get_qualifications()</a>
-					</li>
-					<li class = "nav-item">
-						<a href="service.html" class="nav-link">.get_service()</a>
-					</li>
-					<li class = "nav-item">
-						<a class="nav-link" data-bs-toggle="modal" href="#contact_modal" aria-controls="contact_modal">
-							.contact()
-						</a>
+				<!-- The following is the Hamburger button that populates whenever the screen is shrank. -->
+				<button class = "navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#nav_burger">
+				<span class="navbar-toggler-icon"></span>
+				</button>
+				 
+				<div class="collapse navbar-collapse" id = "nav_burger">
+					
+					<ul class = "navbar-nav nav-tabs ms-auto">
+						<!-- Index Button -->
+						<li class = "nav-item">
+							<a href="index.html" class="nav-link active text-info" aria-current="page" style="background-color:#000000;">.main()</a>
+						</li>
 						
-						<!-- Modal -->
-						<div class="modal fade" id="contact_modal" tabindex="-1" aria-labelledby="modal_label" aria-hidden="true" data-bs-backdrop="static" data-bs-keyboard="false">
-							<div class="modal-dialog modal-dialog-centered">
-								<div class="modal-content border-white"  style="background-color:#000000;">
-									<div class="modal-body">
-										<div class="container fluid" style="background-color:#000000;">
+						<!-- Portfolio Button -->
+						<li class = "nav-item">
+							<a href="portfolio.html" class="nav-link">.get_portfolio()</a>
+						</li>
+						
+						<!-- Qualification Button -->
+						<li class = "nav-item">
+							<a href="qualifications.html" class="nav-link">.get_qualifications()</a>
+						</li>
+						
+						<!-- Service Button -->
+						<li class = "nav-item">
+							<a href="service.html" class="nav-link">.get_service()</a>
+						</li>
+						
+						<!-- Contact Button -->
+						<li class = "nav-item">
+							<a class="nav-link" data-bs-toggle="modal" href="#contact_modal" aria-controls="contact_modal">
+								.contact()
+							</a>
+							
+							<!-- Contact Modal -->
+							<div class="modal fade" id="contact_modal" tabindex="-1" aria-labelledby="modal_label" aria-hidden="true" data-bs-backdrop="static" data-bs-keyboard="false">
+								<div class="modal-dialog modal-dialog-centered">
+									<div class="modal-content border-white"  style="background-color:#000000;">
+										<div class="modal-body">
+											<div class="container fluid" style="background-color:#000000;">
+											
+											<!-- Discord Contact -->
 											<div class="row p-1" style="background-color:#000000;">
-												<a class="btn btn-dark" data-bs-container="body" data-bs-toggle="popover" data-bs-placement="top" data-bs-content="Copied to clipboard!" onclick="copy_disc()" id="discord_info"> <img src="pics/discord.png" width="20"/> Discord: Lance A#1696 </a>
+											<a class="btn btn-dark" data-bs-container="body" data-bs-toggle="popover" data-bs-placement="top" data-bs-content="Copied to clipboard!" onclick="copy_disc()" id="discord_info"> <img src="pics/discord.png" width="20"/> Discord: Lance A#1696 </a>
 											</div>
 											
+											
+											<!-- LinkedIn Contact -->
 											<div class="row p-1" style="background-color:#000000;">
 												<a href="https://www.linkedin.com/in/lanceabuan/" class="btn btn-dark" target="_blank" data-bs-toggle="tooltip" data-bs-placement="top" title="Click to go to LinkedIn"> <img src="pics/linked-contact.png" width="20"/> LinkedIn </a>
-											
 											</div>
 											
+											
+											<!-- Email Contact -->
 											<div class="row p-1" style="background-color:#000000;">
 												<a href="mailto:lancejabuan@gmail.com" class="btn btn-dark" target="_blank" data-bs-toggle="tooltip" data-bs-placement="top" title="Click to send email"> <img src="pics/email-contact.jpg" width="20"/> Email lancejabuan@gmail.com </a>
 											</div>
 											
-										</div>
-									</div>
-									
-									<div class="modal-footer">
-										<button type="button" class="btn btn-danger" data-bs-dismiss="modal">Close</button>
-									</div>
-								</div>
-							</div>
-						</div>
-						
-					</li>
-					<li class="nav-item dropdown">
-							<a class="nav nav-link dropdown-toggle text-warning" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" data-bs-auto-close="outside" aria-expanded="false">
-								Font Options
-							</a>
-							<ul class="dropdown-menu dropdown-menu-end " style="background-color:#000000;"  aria-labelledby="dropdownMenuButton1">
-								<li>
-									<button type="button" class="btn btn-info dropdown-item text-warning" id="Anonymous-Pro" onclick="set_anon_pro()">Anonymous Pro</button>
-								</li>
-								<li>
-									<button type="button" class="btn btn-info dropdown-item text-warning" id="Courier-Prime" onclick="set_courier_prime()">Courier Prime</button>
-								</li>
-								<li>
-									<button type="button" class="btn btn-info dropdown-item text-warning" id="Roboto-Mono" onclick="set_roboto()">Roboto Mono</button>
-								</li>
-								<li>
-									<button type="button" class="btn btn-info dropdown-item text-warning" id="Ubuntu" onclick="set_ubuntu()">Ubuntu</button>
-								</li>
-							</ul>
-					</li>
-				</ul>
-
-			</div>
-		</div>
-	</nav>
-	
-
-	<div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasExample" aria-labelledby="offcanvasExampleLabel">
-	<!-- TODO -->
-	</div>
-	
-	<!-- Below is the autobio card-->
-	<div class="container-fluid">
-		<div class="card mb-3">
-			<div class="row g-0 p-5"  style="background-color:#000000">
-				<div class="col-md-4">
-					<img src="pics/me.jpg" class="img-fluid rounded-start" alt="Photo of Lance sitting and smiling">
-				</div>
-				<div class="col-md-8 justify-content-center">
-					<div class="card-body  text-light">
-						<h1 class="card-title text-center" id">Lance Abuan - Full Stack Developer</h1>
-						<div class="accordion" id="bio-accordion" style="background-color:#000000">
-							<!-- origin, focuses, hobbies -->
-							<div class="accordion-item" style="background-color:#000000">
-								<h2 class="accordion-header" id="origin_heading">
-									<button class="accordion-button collapsed" onclick="load_map()" type="button" data-bs-toggle="collapse" data-bs-target="#origin_info" aria-expanded="false" aria-controls="origin_info">
-									Origin
-									</button>
-								</h2>
-								<div id="origin_info" class="accordion-collapse collapse" aria-labelledby="origin_heading" data-bs-parent="#bio_accordion">
-							
-									<div class="col-sm d-flex">
-										<div class="col-sm-5 p-1">
-											<span class="text-warning">
-											<strong>Lance Abuan is a First Generation immigrant from the Philippines.</strong></span>
-											
-											<br/>
-											<br/>
-											He moved at a young age and grew up in Laredo, Texas, and spent the majority of his childhood there. Eventually, he moved to The Woodlands, Texas, and attended Oak Ridge High School. In High School, he originally planned on being a Statistics major until he took an Introduction to Programming class where he was exposed to Java. He fell in love with the logic of Computer Science and decided it was what he wanted to pursue. 
-										</div>
-										
-										<br/>
-											<div id='map' class="col-sm-7 mw-100" alt="Location of hometown in the Philippines"></div>
-										</span>
-										<script>
-										mapboxgl.accessToken = 'pk.eyJ1IjoibGFuY2VhYnVhbiIsImEiOiJja3RrYTQxY3gxazQxMm9rNDF5aWJhcWliIn0.9WQC5__vK3_5aga7ayZvwg';
-										var map = new mapboxgl.Map({
-											container: 'map',
-											center: [121.562389, 14.118401],
-											zoom: 3,
-											style: 'mapbox://styles/mapbox/streets-v11'
-											});
-									
-										const marker1 = new mapboxgl.Marker()
-										.setLngLat([121.562389, 14.118401])
-										.addTo(map);
-										
-										map.on('load', function () {
-											map.resize();
-										});
-										
-										</script>
-									</div>
-								</div>
-								
-							</div>
-							<div class="accordion-item" style="background-color:#000000">
-								<h2 class="accordion-header" id="hobby_heading">
-									<button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#hobbies_info" aria-expanded="false" aria-controls="origin_info">
-									Hobbies
-									</button>
-								</h2>
-								<div id="hobbies_info" class="accordion-collapse collapse" aria-labelledby="hobby_heading" data-bs-parent="#bio_accordion">
-									<div class="accordion-body text-light">
-									
-										<div id="hobby_carousel" class="carousel slide" data-bs-ride="carousel">
-											<div class="carousel-inner">
-												
-												<div class="carousel-item active">
-													<div class="card mb-3">
-														<div class="row g-0" style="background-color:#000000">
-															<div class="col-md-6">
-																<img src="pics/food.jpg" class="img-fluid rounded-start" alt="...">
-															</div>
-															<div class="col-md-6">
-																<div class="card-body">
-																	<h5 class="card-title">Cooking</h5>
-																	<p class="card-text">Lance cherishes his culture and loves cooking traditional filipino food and desserts.<br/><br/> The image to the left is a meal he made called 'Pancit Canton', a dish
-																	classifiable as Filipino stir-fry noodles.</p>
-																</div>
-															</div>
-														</div>
-													</div>
-												</div>
-											
-												<div class="carousel-item">
-													<div class="card mb-3">
-														<div class="row g-0" style="background-color:#000000">
-															<div class="col-md-6">
-																<img src="pics/photo.jpg" class="img-fluid rounded-start" alt="...">
-															</div>
-															<div class="col-md-6">
-																<div class="card-body">
-																	<h5 class="card-title">Natural Photography</h5>
-																	<p class="card-text">Lance loves observing nature and her natural wonders. His favorite things to photograph are the sea, forests, the sky, and wildlife. <br/><br/> To the left is a photo taken from a summer long trip to the Philippines.</p>
-																	
-																</div>
-															</div>
-														</div>
-													</div>
-												</div>
-		
-												<!-- More needs to be added, so this third carousel is going to be disabled for now"
-												<div class="carousel-item">
-													<div class="card mb-3">
-														<div class="row g-0" style="background-color:#000000">
-															<div class="col-md-6">
-																<img src="pics/food.jpg" class="img-fluid rounded-start" alt="...">
-															</div>
-															<div class="col-md-6">
-																<div class="card-body">
-																	<h5 class="card-title">Music</h5>
-																	<p class="card-text">Lance produces instrumental music and plays both video game and classical songs on the piano. He's played a self-composed medley of 8 songs for a fundraising event once.</p>
-																	
-																</div>
-															</div>
-														</div>
-													</div>
-												</div>
-												
-												-->
-			
+											<!-- Phone Contact -->
+											<div class="row p-1" style="background-color:#000000;">
+												<a href="mailto:lancejabuan@gmail.com" class="btn btn-dark" target="_blank" data-bs-toggle="tooltip" data-bs-placement="top" title="Click to send email"> <img src="pics/email-contact.jpg" width="20"/> Call/Text (936) 703 - 9187 </a>
 											</div>
-												
-
-											<button class="carousel-control-prev" type="button" data-bs-target="#hobby_carousel" data-bs-slide="prev">
-												<span class="carousel-control-prev-icon" aria-hidden="true"></span>
-												<span class="visually-hidden">Previous</span>
-											</button>
 											
-											<button class="carousel-control-next" type="button" data-bs-target="#hobby_carousel" data-bs-slide="next">
-												<span class="carousel-control-next-icon" aria-hidden="true"></span>
-												<span class="visually-hidden">Previous</span>
-											</button>
+										</div>
 										</div>
 										
+										<div class="modal-footer">
+											<button type="button" class="btn btn-danger" data-bs-dismiss="modal">Close</button>
+										</div>
+									</div>
+								</div>
+							</div>
+							<!-- End of Modal -->
+						</li>
+						
+						<!-- Change Font Button -->
+						<li class="nav-item dropdown">
+								<a class="nav nav-link dropdown-toggle text-warning" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" data-bs-auto-close="outside" aria-expanded="false">
+									Font Options
+								</a>
+								<ul class="dropdown-menu dropdown-menu-end " style="background-color:#000000;"  aria-labelledby="dropdownMenuButton1">
+									<li>
+										<button type="button" class="btn btn-info dropdown-item text-warning" id="Anonymous-Pro" onclick="set_anon_pro()">Anonymous Pro</button>
+									</li>
+									<li>
+										<button type="button" class="btn btn-info dropdown-item text-warning" id="Courier-Prime" onclick="set_courier_prime()">Courier Prime</button>
+									</li>
+									<li>
+										<button type="button" class="btn btn-info dropdown-item text-warning" id="Roboto-Mono" onclick="set_roboto()">Roboto Mono</button>
+									</li>
+									<li>
+										<button type="button" class="btn btn-info dropdown-item text-warning" id="Ubuntu" onclick="set_ubuntu()">Ubuntu</button>
+									</li>
+								</ul>
+						</li>
+					</ul>
+
+				</div>
+			</div>
+		</nav>
+		<!-- Navbar ends here -->
+		
+		<!-- Below is the autobio card-->
+		<div class="container-fluid">
+			<div class="card mb-3">
+				<div class="row g-0 p-5"  style="background-color:#000000">
+					<!-- I split this card into two, left is photo and right is text -->
+					<div class="col-md-4">
+						<img src="pics/me.jpg" class="img-fluid rounded-start" alt="Photo of Lance sitting and smiling">
+					</div>
+					
+					<!-- I also split this card into two, left is photo and right is text -->
+					<div class="col-md-8 justify-content-center">
+						<div class="card-body  text-light">
+						
+							<!-- This card is split into two columns, one with the photo on the left, then information on the right. -->
+							<h1 class="card-title text-center" id">Lance Abuan - Full Stack Developer</h1>
+							<div class="accordion" id="bio-accordion" style="background-color:#000000">
+								
+								<!-- this contains everything regarding the origin button and origin content -->
+								<div class="accordion-item" style="background-color:#000000">
+									<h2 class="accordion-header" id="origin_heading">
+										<button class="accordion-button collapsed" onclick="load_map()" type="button" data-bs-toggle="collapse" data-bs-target="#origin_info" aria-expanded="false" aria-controls="origin_info">
+										Origin
+										</button>
+									</h2>
+									<div id="origin_info" class="accordion-collapse collapse" aria-labelledby="origin_heading" data-bs-parent="#bio_accordion">
+								
+										<div class="col-sm d-flex">
+											<div class="col-sm-5 p-1">
+												<span class="text-warning">
+													<strong>Lance Abuan is a First Generation immigrant from 
+													<a class="btn btn-outline-light text-warning" href="https://en.wikipedia.org/wiki/Lucban" target="_blank">Lucban, Quezon</a>
+													in the Philippines.</strong>
+												</span>
+												<br/>
+												<br/>
+												He moved at a young age and grew up in Laredo, Texas, and spent the majority of his childhood there. Eventually, he moved to The Woodlands, Texas, and attended Oak Ridge High School. In High School, he originally planned on being a Statistics major until he took an Introduction to Programming class where he was exposed to Java. He fell in love with the logic of Computer Science and decided it was what he wanted to pursue. 
+											</div>
+											
+											<!-- Below is the map code -->
+											<br/>
+											<div id='map' class="col-sm-7 mw-100" alt="Location of hometown in the Philippines"></div>
+											</span>
+											<script>
+											mapboxgl.accessToken = 'pk.eyJ1IjoibGFuY2VhYnVhbiIsImEiOiJja3RrYTQxY3gxazQxMm9rNDF5aWJhcWliIn0.9WQC5__vK3_5aga7ayZvwg';
+											var map = new mapboxgl.Map({
+												container: 'map',
+												center: [121.562389, 14.118401],
+												zoom: 3,
+												style: 'mapbox://styles/mapbox/streets-v11'
+												});
+										
+											const marker1 = new mapboxgl.Marker()
+											.setLngLat([121.562389, 14.118401])
+											.addTo(map);
+											
+											map.on('load', function () {
+												map.resize();
+											});
+											
+											</script>
+											<!-- Above is the map code -->
+											
+										</div>
 									</div>
 								</div>
 								
+								
+								<!-- this contains everything regarding the hobby button and hobby content -->
+								<div class="accordion-item" style="background-color:#000000">
+									<h2 class="accordion-header" id="hobby_heading">
+										<button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#hobbies_info" aria-expanded="false" aria-controls="origin_info">
+										Hobbies
+										</button>
+									</h2>
+									<div id="hobbies_info" class="accordion-collapse collapse" aria-labelledby="hobby_heading" data-bs-parent="#bio_accordion">
+										<div class="accordion-body text-light">
+											
+											
+											<!-- Inside the hobby accordion body, there is a carousel -->
+											<div id="hobby_carousel" class="carousel slide" data-bs-ride="carousel">
+												<div class="carousel-inner">
+													
+													<!-- This carousel item is about how I love to cook recreationally -->
+													<div class="carousel-item active">
+														<div class="card mb-3">
+															<div class="row g-0" style="background-color:#000000">
+																<div class="col-md-6">
+																	<img src="pics/food.jpg" class="img-fluid rounded-start">
+																</div>
+																<div class="col-md-6">
+																	<div class="card-body">
+																		<h5 class="card-title text-warning">Recreational Cooking</h5>
+																		<p class="card-text">Lance cherishes his culture and enjoys making traditional filipino food and desserts for those who have never tried it. His favorite dishes to chef up are recipes passed down from generation to generation in his family. <br/><br/> The image to the left is a meal he made called <a class="btn btn-outline-light text-warning" href="https://en.wikipedia.org/wiki/Lucban" target="_blank">Pancit Canton</a>, a dish classifiable as Filipino stir-fry noodles.</p>
+																	</div>
+																</div>
+															</div>
+														</div>
+													</div>
+												
+													<!-- This carousel item is about how I love to take pictures -->
+													<div class="carousel-item">
+														<div class="card mb-3">
+															<div class="row g-0" style="background-color:#000000">
+																<div class="col-md-6">
+																	<img src="pics/photo.jpg" class="img-fluid rounded-start">
+																</div>
+																<div class="col-md-6">
+																	<div class="card-body">
+																		<h5 class="card-title text-warning">Natural Photography</h5>
+																		<p class="card-text">Ever since he was young, Lance loved trekking out and observing nature and her natural wonders in awe. Now he brings a camera whenever he travels to capture moments in time. His favorite things to photograph are the sea, forests, the sky, and wildlife.  <br/><br/> To the left is a photo taken from a summer long trip back home to the Philippines.</p>
+																		
+																	</div>
+																</div>
+															</div>
+														</div>
+													</div>
+			
+													<!-- More needs to be added, so this third carousel is going to be disabled for now"
+													<div class="carousel-item">
+														<div class="card mb-3">
+															<div class="row g-0" style="background-color:#000000">
+																<div class="col-md-6">
+																	<img src="pics/food.jpg" class="img-fluid rounded-start" alt="...">
+																</div>
+																<div class="col-md-6">
+																	<div class="card-body">
+																		<h5 class="card-title">Music</h5>
+																		<p class="card-text">Lance produces instrumental music and plays both video game and classical songs on the piano. He's played a self-composed medley of 8 songs for a fundraising event once.</p>
+																		
+																	</div>
+																</div>
+															</div>
+														</div>
+													</div>
+													
+													-->
+				
+												</div>
+													
+
+												<button class="carousel-control-prev" type="button" data-bs-target="#hobby_carousel" data-bs-slide="prev">
+													<span class="carousel-control-prev-icon" aria-hidden="true"></span>
+													<span class="visually-hidden">Previous</span>
+												</button>
+												
+												<button class="carousel-control-next" type="button" data-bs-target="#hobby_carousel" data-bs-slide="next">
+													<span class="carousel-control-next-icon" aria-hidden="true"></span>
+													<span class="visually-hidden">Previous</span>
+												</button>
+											</div>
+											
+										</div>
+									</div>
+									
+								</div>
+								
 							</div>
-							
 						</div>
 					</div>
 				</div>
 			</div>
 		</div>
+		<!-- End of div main -->
 	</div>
+	
+	<script>
+	document.addEventListener("keyup", function(event) {
+		if (event.keyCode === 13) {
+		  hide_loading_screen();
+		}
+	});
+	</script>
 	
 	<!-- contains the load_all() function that calls the other functions whenever the page loads -->
 	<script src="load_index.js">
     </script>
+	
+	<script src="initial_screen.js">
+	</script>
 	
 	<!-- contains the script for the typing effect in the navbar -->
 	<script src="auto_gen_text.js">

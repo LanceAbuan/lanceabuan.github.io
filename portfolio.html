@@ -18,11 +18,13 @@
 	<nav class = "navbar navbar-expand-lg navbar-dark">
 	
 		<div class="container-fluid">
-		
+			
+			<!-- The following is the top left text which contains the auto-generated text and is a link to the home page -->
 			<a href="index.html" class = "navbar-brand d-none d-md-block" title="Click to go to the Home page">
 			.get_portfolio() | ><span class = "text-warning" id="phrase" style="font-style: italic;"></span><span id="blinker"></span>
 			</a>
 			
+			<!-- The following button is a hamburger menu that appears whenever the screen is shrank -->
 			<button class = "navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#nav_burger">
 			<span class="navbar-toggler-icon"></span>
 			</button>
@@ -33,37 +35,51 @@
 					<li class = "nav-item">
 						<a href="index.html" class="nav-link">.main()</a>
 					</li>
+					
 					<li class = "nav-item">
 						<a href="portfolio.html" class="nav-link active text-info" aria-current="page" style="background-color:#000000;">.get_portfolio()</a>
 					</li>
+					
 					<li class = "nav-item">
 						<a href="qualifications.html" class="nav-link">.get_qualifications()</a>
 					</li>
+					
 					<li class = "nav-item">
 						<a href="service.html" class="nav-link">.get_service()</a>
 					</li>
+					
 					<li class = "nav-item">
 						<a class="nav-link" data-bs-toggle="modal" href="#contact_modal" aria-controls="contact_modal">
 							.contact()
 						</a>
 						
-						<!-- Modal --><!-- Modal -->
+						<!-- Modal -->
 						<div class="modal fade" id="contact_modal" tabindex="-1" aria-labelledby="modal_label" aria-hidden="true" data-bs-backdrop="static" data-bs-keyboard="false">
 							<div class="modal-dialog modal-dialog-centered">
 								<div class="modal-content border-white"  style="background-color:#000000;">
 									<div class="modal-body">
 										<div class="container fluid" style="background-color:#000000;">
+											
+											<!-- Discord Contact -->
 											<div class="row p-1" style="background-color:#000000;">
-												<a class="btn btn-dark" data-bs-container="body" data-bs-toggle="popover" data-bs-placement="top" data-bs-content="Copied to clipboard!" onclick="copy_disc()" id="discord_info"> <img src="pics/discord.png" width="20"/> Discord: Lance A#1696 </a>
+											<a class="btn btn-dark" data-bs-container="body" data-bs-toggle="popover" data-bs-placement="top" data-bs-content="Copied to clipboard!" onclick="copy_disc()" id="discord_info"> <img src="pics/discord.png" width="20"/> Discord: Lance A#1696 </a>
 											</div>
 											
+											
+											<!-- LinkedIn Contact -->
 											<div class="row p-1" style="background-color:#000000;">
 												<a href="https://www.linkedin.com/in/lanceabuan/" class="btn btn-dark" target="_blank" data-bs-toggle="tooltip" data-bs-placement="top" title="Click to go to LinkedIn"> <img src="pics/linked-contact.png" width="20"/> LinkedIn </a>
-											
 											</div>
 											
+											
+											<!-- Email Contact -->
 											<div class="row p-1" style="background-color:#000000;">
 												<a href="mailto:lancejabuan@gmail.com" class="btn btn-dark" target="_blank" data-bs-toggle="tooltip" data-bs-placement="top" title="Click to send email"> <img src="pics/email-contact.jpg" width="20"/> Email lancejabuan@gmail.com </a>
+											</div>
+											
+											<!-- Phone Contact -->
+											<div class="row p-1" style="background-color:#000000;">
+												<a href="mailto:lancejabuan@gmail.com" class="btn btn-dark" target="_blank" data-bs-toggle="tooltip" data-bs-placement="top" title="Click to send email"> <img src="pics/email-contact.jpg" width="20"/> Call/Text (936) 703 - 9187 </a>
 											</div>
 											
 										</div>
@@ -74,8 +90,12 @@
 									</div>
 								</div>
 							</div>
-						</div>
+						</div>	
+						<!-- Modal End -->
+						
 					</li>
+					
+					
 					<li class="nav-item dropdown">
 							<a class="nav nav-link dropdown-toggle text-warning" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" data-bs-auto-close="outside" aria-expanded="false">
 								Font Options
@@ -101,32 +121,53 @@
 	</nav>
 	
 		
-	<!--
-	
-	
-	<div class="card text-center">
-		<div class="card-header">
-			<ul class="nav nav-tabs card-header-tabs">
-				<li class="nav-item">
-					<a class="navlink">
-	-->
-		
-	<div class="accordion-item" style="background-color:#000000">
-		<h2 class="accordion-header" id="focus_heading">
-			<button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#focus_info" aria-expanded="false" aria-controls="origin_info">
-			Focuses
-			</button>
-		</h2>
-		<div id="focus_info" class="accordion-collapse collapse" aria-labelledby="focus_heading" data-bs-parent="#bio_accordion">
-			<div class="accordion-body text-light">
-				He currently works as the Lead Developer of an Indie Game group, as a Developer with the Department of Entomology at Texas A&M University, and as a Private App developer. 
-				In addition, he also loves writing scripts and developing bots. The bot he is currently working on is his Discord Music bot appropriately called 
-				<a href="https://discord.com/api/oauth2/authorize?client_id=844727863835099136&permissions=8&scope=bot" 
-				class="btn btn-outline-primary text-warning" target="_blank" data-bs-toggle="tooltip" data-bs-placement="top" title="Click to Invite Bot">
-				<img src="pics/discord.png" width="20"/> C-Sharp </a>. 
-				</p>
-			</div>
+	<div class="container">
+		<div class="row justify-content-center p-3">
 		</div>
+	</div>
+	
+	<div class="container fluid text-light border border-danger p-3">
+			<h3>
+				Lance Abuan currently works as <span class="text-warning">the Lead Developer of an Indie Game group, as a Developer with the Department of Entomology at Texas A&M University, and as a Private App developer. </span>
+			</h3>
+			<br/>
+			<br/>
+			<h2> Current Projects </h2>	
+			<ol> 
+				<li>3D First-Person Adventure game following a child exploring their dreams </li>
+			
+				<li>Custom-Made Weather App with a minimalist Design </li>
+				
+				<li>Educational Game Focusing on teaching the science of Genome Evolution through simulation </li>
+				
+				<li>Rolling out a Discord bot for wide-use, entertainment purposes </li>
+			</ol>	
+			
+			The bot he is currently working on is a Discord bot he created alone with the original intent of playing music in a voice channel, appropriately called 
+			<a href="https://discord.com/api/oauth2/authorize?client_id=844727863835099136&permissions=8&scope=bot" 
+			class="btn btn-outline-primary text-warning" target="_blank" data-bs-toggle="tooltip" data-bs-placement="top" title="Click to Invite Bot">
+			<img src="pics/discord.png" width="20"/> C Sharp </a>, written in Python. It is currently maintained by him and his colleague, Marco.
+			He is currently looking for both 
+			<a href="https://forms.gle/1rKmw6EF6KdyZHXP7" class="btn btn-outline-primary text-warning" target="_blank" data-bs-toggle="tooltip" data-bs-placement="top" title="Click to Invite Bot"> <img src="pics/google-forms.png" width="20"/> suggestions </a> and <a class="btn btn-outline-primary text-warning" data-bs-toggle="modal" href="#contact_modal" aria-controls="contact_modal"> <img src="pics/phone.png" width="20"/> individuals </a>  who would like to assist him in furthering the bot's functionality.
+			
+			
+	</div>
+
+	
+	<br/>
+	
+	<div class = "container text-dark text-center">
+		<!-- Don't want things to touch the wall so we use containers -->
+		<div class="row g-0" >
+			<!-- The 3 divs below are different cards -->
+			<div class= "col-sm-12  border border-warning">
+					<div class="card text-center mb-4 py-3 mx-auto" style="background-color:#000000">
+						<img src="pics/github.png" class="card-img-top mx-auto" style=" width: 9rem;height: 9rem;background-color:#000000"></img>
+						<div class="card-body text-light">
+							<a href="https://github.com/LanceAbuan" class="btn btn-outline-dark" target="_blank"><h1 class="card-title text-info">GitHub</h1></a>
+						</div>
+					</div>
+			</div>
 	</div>
 	
 	

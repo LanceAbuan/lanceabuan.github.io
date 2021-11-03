@@ -1,194 +1,288 @@
-<!DOCTYPE html>
-
-<html lang = "en" class = "index">
-
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html lang = "en">
 <head>
-    <meta charset="UTF-8">
-    <meta name = "description" content="HowdyHack 2020!">
-    <title>No Spies Allowed!</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Anonymous+Pro&family=Courier+Prime&family=Roboto+Mono&family=Ubuntu+Mono&display=swap" rel="stylesheet"> 
 
-    <!-- The below links to our style sheets -->
-	<link rel="stylesheet" href="styles.css">
-	<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap">
 
-	
+<title>Lance_Abuan.main()</title>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
+<link rel="stylesheet" href = "style.css">
 
-	<!-- Below is the tab image <3 -->
-	<link rel="icon" href="photos/poggers.png" type="image/x-icon"/>
+<script src='https://api.mapbox.com/mapbox-gl-js/v2.3.1/mapbox-gl.js'></script>
+<link href='https://api.mapbox.com/mapbox-gl-js/v2.3.1/mapbox-gl.css' rel='stylesheet' />
 
-		<style>
-			  footer{
-   			  	position: fixed;
-    			background-color: tan;
-    			padding-bottom: 10px;
-    			z-index: 1;
-    			bottom: 0;
-  				}
-		</style>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<meta name="viewport" content="width=device-width, initial-scale=1">
 
-	
 </head>
 
-
-
-
-
-
-<section id="1">
-<header>
-	<br>
-	<img src="photos/judo.png" style="position:absolute;height: 64px;width: 64px; left: 39%; top: 2%">
-	<h1 style="margin-left: 160px;text-align: center; position: relative;padding-bottom: 20px;">Cyber-Security Self Defense</h1>
-	<img src="photos/judo.png" style="position:absolute;height: 64px;width: 64px; right: 20%; top: 2%;">
-	<hr />
-</header>
-</section>
-
-
-
-<body style = "text-align: center">
-
-
-
-<div class="sidebar">
+<body onload="index_load()" id="body_id" style="background-color:#000000;">
+	<!-- Below is the Navigation Bar -->
+	<nav class = "navbar navbar-expand-lg navbar-dark">
 	
-	<p>Table of Contents:</p>
-	<br>
-  <a href="BaitandSwitch.html">Bait and Switch</a>
-  <a href="Malware&CookieTheft.html">Malware and Cookie Theft</a>
-  <a href="EavesdroppingandManInMiddle">Eaves - dropping and Man in the Middle</a>
-  <a href="Keylogging.html">Keylogging</a>
-  <a href="Phishing.html">Phishing</a>
-  <a href="WateringHoleAttacks.html">Watering Hole Attacks</a>
-	
-	
-</div>
+		<div class="container-fluid">
+			<a href="index.html" class = "navbar-brand d-none d-md-block" title="Click to go to the Home page">
+			.main() | ><span class = "text-warning" id="phrase" style="font-style: italic;"></span><span id="blinker"></span>
+			</a>
+			
+			<button class = "navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#nav_burger">
+			<span class="navbar-toggler-icon"></span>
+			</button>
+			 
+			<div class="collapse navbar-collapse" id = "nav_burger">
+				
+				<ul class = "navbar-nav nav-tabs ms-auto">
+					<li class = "nav-item">
+						<a href="index.html" class="nav-link active text-info" aria-current="page" style="background-color:#000000;">.main()</a>
+					</li>
+					<li class = "nav-item">
+						<a href="portfolio.html" class="nav-link">.get_portfolio()</a>
+					</li>
+					<li class = "nav-item">
+						<a href="qualifications.html" class="nav-link">.get_qualifications()</a>
+					</li>
+					<li class = "nav-item">
+						<a href="service.html" class="nav-link">.get_service()</a>
+					</li>
+					<li class = "nav-item">
+						<a class="nav-link" data-bs-toggle="modal" href="#contact_modal" aria-controls="contact_modal">
+							.contact()
+						</a>
+						
+						<!-- Modal -->
+						<div class="modal fade" id="contact_modal" tabindex="-1" aria-labelledby="modal_label" aria-hidden="true" data-bs-backdrop="static" data-bs-keyboard="false">
+							<div class="modal-dialog modal-dialog-centered">
+								<div class="modal-content border-white"  style="background-color:#000000;">
+									<div class="modal-body">
+										<div class="container fluid" style="background-color:#000000;">
+											<div class="row p-1" style="background-color:#000000;">
+												<a class="btn btn-dark" data-bs-container="body" data-bs-toggle="popover" data-bs-placement="top" data-bs-content="Copied to clipboard!" onclick="copy_disc()" id="discord_info"> <img src="pics/discord.png" width="20"/> Discord: Lance A#1696 </a>
+											</div>
+											
+											<div class="row p-1" style="background-color:#000000;">
+												<a href="https://www.linkedin.com/in/lanceabuan/" class="btn btn-dark" target="_blank" data-bs-toggle="tooltip" data-bs-placement="top" title="Click to go to LinkedIn"> <img src="pics/linked-contact.png" width="20"/> LinkedIn </a>
+											
+											</div>
+											
+											<div class="row p-1" style="background-color:#000000;">
+												<a href="mailto:lancejabuan@gmail.com" class="btn btn-dark" target="_blank" data-bs-toggle="tooltip" data-bs-placement="top" title="Click to send email"> <img src="pics/email-contact.jpg" width="20"/> Email lancejabuan@gmail.com </a>
+											</div>
+											
+										</div>
+									</div>
+									
+									<div class="modal-footer">
+										<button type="button" class="btn btn-danger" data-bs-dismiss="modal">Close</button>
+									</div>
+								</div>
+							</div>
+						</div>
+						
+					</li>
+					<li class="nav-item dropdown">
+							<a class="nav nav-link dropdown-toggle text-warning" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" data-bs-auto-close="outside" aria-expanded="false">
+								Font Options
+							</a>
+							<ul class="dropdown-menu dropdown-menu-end " style="background-color:#000000;"  aria-labelledby="dropdownMenuButton1">
+								<li>
+									<button type="button" class="btn btn-info dropdown-item text-warning" id="Anonymous-Pro" onclick="set_anon_pro()">Anonymous Pro</button>
+								</li>
+								<li>
+									<button type="button" class="btn btn-info dropdown-item text-warning" id="Courier-Prime" onclick="set_courier_prime()">Courier Prime</button>
+								</li>
+								<li>
+									<button type="button" class="btn btn-info dropdown-item text-warning" id="Roboto-Mono" onclick="set_roboto()">Roboto Mono</button>
+								</li>
+								<li>
+									<button type="button" class="btn btn-info dropdown-item text-warning" id="Ubuntu" onclick="set_ubuntu()">Ubuntu</button>
+								</li>
+							</ul>
+					</li>
+				</ul>
 
-<!--The below is program for the first "page"-->
-<div class = "main" style="padding-right: 10%">
-<section id="2">
-	<br><br><br>
-<img src = "photos/cyber-security.png" width = "256" height = "256" alt = "Cyber Security" style="float: left; shape-outside: circle(); margin-right: 0;">
-<h3 class = "main" style="margin-left: 0; margin-right: 0; margin-top: 0; margin-bottom: 0; padding-top: 100px;" >
-	Howdy! This is an interactive website that will teach you about the most popular ways in which hackers steal your data!
-
-	<br>
-</h3>
-
-<br>
-<br>
-<img src = "photos/hacker.png" width = "256" height = "256" alt = "Hacker" style="float: right;">
-<h3 class = "main" style="margin-right: auto; margin-right: auto; margin-top: auto; margin-bottom: auto; padding-top: 100px;padding-bottom: 75px; position: relative;">
-	<a href="#3"><img src="photos/down-arrow.png" style="width:64px;height:64px; position: absolute; bottom: 40%; right: -150px;"></a>
-	There are many clever ways in which hackers can gain access to your private information,
-	some ways of which you might not have even known were possible.
-</h3>
-
-<img src = "photos/search.png" width = "256" height = "256" alt = "Searching" style="float: left; shape-outside: circle(); margin-right: 0;">
-<h3 class = "main" style="margin-left: 0; margin-right: 0; margin-top: 0; margin-bottom: 0; padding-top: 100px;" > 
-	After exploring our website, you will be able to detect and avoid the most common hacking practices.
-	<br>
-</h3>
-
-</section>
-</div>
-	
-
-<!--The below is program for the second "page"-->
-<div class="main" style="padding-right: 10%">
-	
-	<section id="3">
-	<h1 style="padding-top: 3%;">What is Cyber-Security and why is it important?</h1>
-
-	<img src = "photos/study.png" width = "256" height = "256" alt = "Studying" style="float: left; shape-outside: circle(); margin-right: 0;">
-	<h3 class = "main" style="margin-left: 0; margin-right: 0; margin-top: 0; margin-bottom: 0; padding-top: 80px;" >
-		<blockquote cite = https://digitalguardian.com/blog/what-cyber-security></blockquote>
-		Cyber security refers to the body of technologies, processes, and practices designed to protect networks, devices, programs, and data from attack, damage, or unauthorized access. 
-		</blockquote>
-		<br>
-	</h3>
-	
-	<br>
-	<br>
-	
-	<img src = "photos/thief.png" width = "256" height = "256" alt = "Thief" style="float: right;">
-	<h3 class = "main" style="margin-right: auto; margin-right: auto; margin-top: auto; margin-bottom: auto; padding-top: 100px; padding-bottom: 75px; position: relative;">
-		<a href="#4"><img src="photos/down-arrow.png" style="width:64px;height:64px; position: absolute; bottom: 40%; right: -150px;"></a>
-		The black market for illegally harvested data is increasing rapidly. Examples of harvested data include credit card numbers and social security numbers.
-		<br>
-	</h3>
-	
-	<img src = "photos/chart.png" width = "256" height = "256" alt = "Income Chart" style="float: left; shape-outside: circle(); margin-right: 0;">
-	<h3 class = "main" style="margin-left: 0; margin-right: 0; margin-top: 0; margin-bottom: 0; padding-top: 75px;" > 
-		As more and more personal information is stored on the internet, the amount of hackers grows steadily and the demand for Cyber-Security increases as well.
-		<br>
-	</h3>
+			</div>
+		</div>
+	</nav>
 	
 
+	<div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasExample" aria-labelledby="offcanvasExampleLabel">
+	<!-- TODO -->
+	</div>
 	
-	</section>
-</div>
+	<!-- Below is the autobio card-->
+	<div class="container-fluid">
+		<div class="card mb-3">
+			<div class="row g-0 p-5"  style="background-color:#000000">
+				<div class="col-md-4">
+					<img src="pics/me.jpg" class="img-fluid rounded-start" alt="Photo of Lance sitting and smiling">
+				</div>
+				<div class="col-md-8 justify-content-center">
+					<div class="card-body  text-light">
+						<h1 class="card-title text-center" id">Lance Abuan - Full Stack Developer</h1>
+						<div class="accordion" id="bio-accordion" style="background-color:#000000">
+							<!-- origin, focuses, hobbies -->
+							<div class="accordion-item" style="background-color:#000000">
+								<h2 class="accordion-header" id="origin_heading">
+									<button class="accordion-button collapsed" onclick="load_map()" type="button" data-bs-toggle="collapse" data-bs-target="#origin_info" aria-expanded="false" aria-controls="origin_info">
+									Origin
+									</button>
+								</h2>
+								<div id="origin_info" class="accordion-collapse collapse" aria-labelledby="origin_heading" data-bs-parent="#bio_accordion">
+							
+									<div class="col-sm d-flex">
+										<div class="col-sm-5 p-1">
+											<span class="text-warning">
+											<strong>Lance Abuan is a First Generation immigrant from the Philippines.</strong></span>
+											
+											<br/>
+											<br/>
+											He moved at a young age and grew up in Laredo, Texas, and spent the majority of his childhood there. Eventually, he moved to The Woodlands, Texas, and attended Oak Ridge High School. In High School, he originally planned on being a Statistics major until he took an Introduction to Programming class where he was exposed to Java. He fell in love with the logic of Computer Science and decided it was what he wanted to pursue. 
+										</div>
+										
+										<br/>
+											<div id='map' class="col-sm-7 mw-100" alt="Location of hometown in the Philippines"></div>
+										</span>
+										<script>
+										mapboxgl.accessToken = 'pk.eyJ1IjoibGFuY2VhYnVhbiIsImEiOiJja3RrYTQxY3gxazQxMm9rNDF5aWJhcWliIn0.9WQC5__vK3_5aga7ayZvwg';
+										var map = new mapboxgl.Map({
+											container: 'map',
+											center: [121.562389, 14.118401],
+											zoom: 3,
+											style: 'mapbox://styles/mapbox/streets-v11'
+											});
+									
+										const marker1 = new mapboxgl.Marker()
+										.setLngLat([121.562389, 14.118401])
+										.addTo(map);
+										
+										map.on('load', function () {
+											map.resize();
+										});
+										
+										</script>
+									</div>
+								</div>
+								
+							</div>
+							<div class="accordion-item" style="background-color:#000000">
+								<h2 class="accordion-header" id="hobby_heading">
+									<button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#hobbies_info" aria-expanded="false" aria-controls="origin_info">
+									Hobbies
+									</button>
+								</h2>
+								<div id="hobbies_info" class="accordion-collapse collapse" aria-labelledby="hobby_heading" data-bs-parent="#bio_accordion">
+									<div class="accordion-body text-light">
+									
+										<div id="hobby_carousel" class="carousel slide" data-bs-ride="carousel">
+											<div class="carousel-inner">
+												
+												<div class="carousel-item active">
+													<div class="card mb-3">
+														<div class="row g-0" style="background-color:#000000">
+															<div class="col-md-6">
+																<img src="pics/food.jpg" class="img-fluid rounded-start" alt="...">
+															</div>
+															<div class="col-md-6">
+																<div class="card-body">
+																	<h5 class="card-title">Cooking</h5>
+																	<p class="card-text">Lance cherishes his culture and loves cooking traditional filipino food and desserts.<br/><br/> The image to the left is a meal he made called 'Pancit Canton', a dish
+																	classifiable as Filipino stir-fry noodles.</p>
+																</div>
+															</div>
+														</div>
+													</div>
+												</div>
+											
+												<div class="carousel-item">
+													<div class="card mb-3">
+														<div class="row g-0" style="background-color:#000000">
+															<div class="col-md-6">
+																<img src="pics/photo.jpg" class="img-fluid rounded-start" alt="...">
+															</div>
+															<div class="col-md-6">
+																<div class="card-body">
+																	<h5 class="card-title">Natural Photography</h5>
+																	<p class="card-text">Lance loves observing nature and her natural wonders. His favorite things to photograph are the sea, forests, the sky, and wildlife. <br/><br/> To the left is a photo taken from a summer long trip to the Philippines.</p>
+																	
+																</div>
+															</div>
+														</div>
+													</div>
+												</div>
+		
+												<!-- More needs to be added, so this third carousel is going to be disabled for now"
+												<div class="carousel-item">
+													<div class="card mb-3">
+														<div class="row g-0" style="background-color:#000000">
+															<div class="col-md-6">
+																<img src="pics/food.jpg" class="img-fluid rounded-start" alt="...">
+															</div>
+															<div class="col-md-6">
+																<div class="card-body">
+																	<h5 class="card-title">Music</h5>
+																	<p class="card-text">Lance produces instrumental music and plays both video game and classical songs on the piano. He's played a self-composed medley of 8 songs for a fundraising event once.</p>
+																	
+																</div>
+															</div>
+														</div>
+													</div>
+												</div>
+												
+												-->
+			
+											</div>
+												
 
-<br>
-<br>
-<!--The below is program for the third "page"-->
-<div class="main" style="padding-right: 10%">
+											<button class="carousel-control-prev" type="button" data-bs-target="#hobby_carousel" data-bs-slide="prev">
+												<span class="carousel-control-prev-icon" aria-hidden="true"></span>
+												<span class="visually-hidden">Previous</span>
+											</button>
+											
+											<button class="carousel-control-next" type="button" data-bs-target="#hobby_carousel" data-bs-slide="next">
+												<span class="carousel-control-next-icon" aria-hidden="true"></span>
+												<span class="visually-hidden">Previous</span>
+											</button>
+										</div>
+										
+									</div>
+								</div>
+								
+							</div>
+							
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
 	
-	<h1 style="padding-top: 20%; margin-bottom:0px ;">What should I do?</h1>
-
-	<section id="4">
-	<img src = "photos/fight.png" width = "256" height = "256" alt = "Fight!" style="float: left; shape-outside: circle(); margin-right: 0;">
-	<h3 class = "main" style="margin-left: 0; margin-right: 0; margin-top: 0; margin-bottom: 0; padding-top: 0px;" >
-		<blockquote cite = https://digitalguardian.com/blog/what-cyber-security></blockquote>
-		<br>
-		Despite the many ways hackers can attempt to steal your information, you need not fear. There are tons of ways to proactively fight back and protect yourself! 
-		</blockquote>
-		<br>
-	</h3>
+	<!-- contains the load_all() function that calls the other functions whenever the page loads -->
+	<script src="load_index.js">
+    </script>
 	
-	<br>
-	<br>
-	<br>
+	<!-- contains the script for the typing effect in the navbar -->
+	<script src="auto_gen_text.js">
+    </script>
 	
-	<img src = "photos/masquerade.png" width = "256" height = "256" alt = "Disguise" style="float: right;  shape-outside: circle(); margin-right: 0;">
-	<h3 class = "main" style="margin-right: auto; margin-right: auto; margin-top: auto; margin-bottom: auto; padding-top: 100px; padding-bottom: 50px; position: relative;">
-		<a href="#2"><img src="photos/upload.png" style="width:64px;height:64px; position: absolute; bottom: 30%; right: -150px;"></a>
-		One way of the best ways of fighting back is by using a VPN. VPN's will disguise the info you send online and make it very difficult for hackers to trace you!
-	</h3>
+	<!-- checks what font to load -->
+	<script src="font_load.js">
+    </script>
 	
-	<img src = "photos/knight.png" width = "256" height = "256" alt = "Guardian" style="float: left; shape-outside: circle(); margin-right: 0;">
-	<h3 class = "main" style="margin-left: 0; margin-right: 0; margin-top: 0; margin-bottom: 0; padding-top: 100px; position: relative;" > 
-		Anti-Virus softwares are effective at safeguarding your info. Anti-Virus software will detect and destroy malicious applications that may have been leaking your information.
-		<br>
-	</h3>
+	<!-- contains the blinking script that creates a typing effect -->
+	<script src="blink.js">
+    </script>
 	
-	<br><br><br>
-
+	<!-- script that changes the font -->
+	<script src="change_font_index.js">
+    </script>
 	
-	<h1>
-		The main way to prevent hackers from stealing your info is by recognizing the main ways they do so.
-	</h1>
-	<p>	
-	Click on the table of contents to learn more about each type!
-	</p>
+	<script src="map_loader.js">
+	</script>
 
-	<br><br><br><br>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ" crossorigin="anonymous">
+</script>
 
-	</section>
-</div>
-
-
-</body>	
-
-<footer style = "text-align: center; left: 150px; width: 100%;">	
-	<a href = "About.html">About Us</a>
-    <br>
-	<a href = "Sources.html">Citations</a>
-	<br>
-    <a href = "#1">Back to the top of the page</a>
-	<!--Just spacing for looks-->
-	<br>
-	Icons made by <a href="https://www.flaticon.com/authors/freepik" title="Freepik">Freepik</a> from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a>
-</footer>
-
+</body>
 </html>

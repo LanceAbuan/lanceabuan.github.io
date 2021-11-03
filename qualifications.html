@@ -1,0 +1,231 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html lang = "en">
+<head>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Anonymous+Pro&family=Courier+Prime&family=Roboto+Mono&family=Ubuntu+Mono&display=swap" rel="stylesheet"> 
+
+<title>Lance_Abuan.get_qualifications()</title>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
+<link rel="stylesheet" href = "style.css">
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+</head>
+
+<body onload="load_all()" id="body_id" style="background-color:#000000;">
+	<!-- Below is the Navigation Bar -->
+	<nav class = "navbar navbar-expand-lg navbar-dark">
+	
+		<div class="container-fluid">
+		
+			<a href="index.html" class = "navbar-brand d-none d-md-block" title="Click to go to the Home page">
+			.get_qualifications() | ><span class = "text-warning" id="phrase" style="font-style: italic;"></span><span id="blinker"></span>
+			</a>
+			 
+			<button class = "navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#nav_burger">
+			<span class="navbar-toggler-icon"></span>
+			</button>
+			 
+			<div class="collapse navbar-collapse" id = "nav_burger">
+				
+				<ul class = "navbar-nav nav-tabs ms-auto">
+					<li class = "nav-item">
+						<a href="index.html" class="nav-link">.main()</a>
+					</li>
+					<li class = "nav-item">
+						<a href="portfolio.html" class="nav-link">.get_portfolio()</a>
+					</li>
+					<li class = "nav-item">
+						<a href="qualifications.html"  class="nav-link active text-info" aria-current="page" style="background-color:#000000;">.get_qualifications()</a>
+					</li>
+					<li class = "nav-item">
+						<a href="service.html" class="nav-link">.get_service()</a>
+					</li>
+					<li class = "nav-item">
+						<a class="nav-link" data-bs-toggle="modal" href="#contact_modal" aria-controls="contact_modal">
+							.contact()
+						</a>
+						
+						<!-- Modal --><!-- Modal -->
+						<div class="modal fade" id="contact_modal" tabindex="-1" aria-labelledby="modal_label" aria-hidden="true" data-bs-backdrop="static" data-bs-keyboard="false">
+							<div class="modal-dialog modal-dialog-centered">
+								<div class="modal-content border-white"  style="background-color:#000000;">
+									<div class="modal-body">
+										<div class="container fluid" style="background-color:#000000;">
+											<div class="row p-1" style="background-color:#000000;">
+												<a class="btn btn-dark" data-bs-container="body" data-bs-toggle="popover" data-bs-placement="top" data-bs-content="Copied to clipboard!" onclick="copy_disc()" id="discord_info"> <img src="pics/discord.png" width="20"/> Discord: Lance A#1696 </a>
+											</div>
+											
+											<div class="row p-1" style="background-color:#000000;">
+												<a href="https://www.linkedin.com/in/lanceabuan/" class="btn btn-dark" target="_blank" data-bs-toggle="tooltip" data-bs-placement="top" title="Click to go to LinkedIn"> <img src="pics/linked-contact.png" width="20"/> LinkedIn </a>
+											
+											</div>
+											
+											<div class="row p-1" style="background-color:#000000;">
+												<a href="mailto:lancejabuan@gmail.com" class="btn btn-dark" target="_blank" data-bs-toggle="tooltip" data-bs-placement="top" title="Click to send email"> <img src="pics/email-contact.jpg" width="20"/> Email lancejabuan@gmail.com </a>
+											</div>
+											
+										</div>
+									</div>
+									
+									<div class="modal-footer">
+										<button type="button" class="btn btn-danger" data-bs-dismiss="modal">Close</button>
+									</div>
+								</div>
+							</div>
+						</div>
+						
+						
+					</li>
+					<li class="nav-item dropdown">
+							<a class="nav nav-link dropdown-toggle text-warning" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" data-bs-auto-close="outside" aria-expanded="false">
+								Font Options
+							</a>
+							<ul class="dropdown-menu dropdown-menu-end " style="background-color:#000000;"  aria-labelledby="dropdownMenuButton1">
+								<li>
+									<button type="button" class="btn btn-info dropdown-item text-warning" id="Anonymous-Pro" onclick="set_anon_pro()">Anonymous Pro</button>
+								</li>
+								<li>
+									<button type="button" class="btn btn-info dropdown-item text-warning" id="Courier-Prime" onclick="set_courier_prime()">Courier Prime</button>
+								</li>
+								<li>
+									<button type="button" class="btn btn-info dropdown-item text-warning" id="Roboto-Mono" onclick="set_roboto()">Roboto Mono</button>
+								</li>
+								<li>
+									<button type="button" class="btn btn-info dropdown-item text-warning" id="Ubuntu" onclick="set_ubuntu()">Ubuntu</button>
+								</li>
+							</ul>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</nav>
+	
+	<div class="container">
+		<div class="row justify-content-center p-3">
+				<a class="btn btn-outline-danger" href="pics/resume.pdf" target="_blank">
+					<img src="pics/file-pdf.svg"></img> Open Resume
+				</a>
+		</div>
+	</div>
+	
+	<div class="container fluid text-light">
+		<span class="text-warning">
+			<strong>Lance is currently focusing on Software Development and Machine Learning.</strong>
+		</span> 
+		<br/><br/>He is interested in Data Analytics, Data Science, and Cyber Security.
+		<br/>
+		<br/>
+		
+		Lance has an in-depth knowledge of multiple programming mindsets and programming languages, garnered from experience working as both a Development Lead and a Development team member in different environments.
+		<br/>
+		<br/>
+		<div class="container border border-danger">
+			<ul>
+				<li> Object Oriented Analysis & Object Oriented Design</li>
+				<li> UI & UX Skills </li>
+				<li> Data Science </li>
+				<li> Database Manager </li>
+			</ul>
+		</div>
+		<br/>
+		<br/>
+	</div>
+	
+	<!-- Below is the Card Row -->
+	<div class = "text-dark text-center">
+		<!-- Don't want things to touch the wall so we use containers -->
+		<div class="row g-0" >
+			
+			<!-- The 3 divs below are different cards -->
+			<div class= "col-sm-4 d-flex border border-warning p-1">
+				<div class="card text-center mb-4 py-3 mx-auto" style="background-color:#000000">
+					<img src="pics/cpp.png" class="card-img-top mx-auto" style=" width: 8rem;height: 9rem;background-color:#000000"></img>
+					<div class="card-body text-light">
+						<h1 class="card-title">C/C++</h1>
+					</div>
+				</div>
+			</div>
+			
+			<div class= "col-sm-4 d-flex border border-warning p-1">
+				<div class="card text-center mb-4 py-3 mx-auto" style="background-color:#000000">
+					<img src="pics/py.png" class="card-img-top mx-auto" style=" width: 8rem;height: 9rem;background-color:#000000"></img>
+					<div class="card-body text-light">
+						<h1 class="card-title">Python</h1>
+					</div>
+				</div>
+			</div>
+			
+			<div class= "col-sm-4 d-flex border border-warning p-1">
+				<div class="card text-center mb-4 py-3 mx-auto" style="background-color:#000000">
+					<img src="pics/java.png" class="card-img-top mx-auto" style=" width: 8rem;height: 9rem;background-color:#000000"></img>
+					<div class="card-body text-light">
+						<h1 class="card-title">Java</h1>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	
+	<div class = "text-dark text-center">
+		<!-- Don't want things to touch the wall so we use containers -->
+		<div class="row g-0" >
+			
+			<!-- The 3 divs below are different cards -->
+			<div class= "col-sm-4 d-flex border border-warning p-1">
+				<div class="card text-center mb-4 mx-auto py-3" style="background-color:#000000">
+					<img src="pics/sql.png" class="card-img-top mx-auto" style=" width: 8rem;height: 9rem;background-color:#000000"></img>
+					<div class="card-body text-light">
+						<h1 class="card-title">SQL</h1>
+					</div>
+				</div>
+			</div>
+			
+			<div class= "col-sm-4 d-flex border border-warning p-1">
+				<div class="card  text-center mb-4 border-0  mx-auto py-3" style="background-color:#000000">
+					<img src="pics/unreal.png" class="card-img-top mx-auto" style="width: 8rem; height: 9rem;background-color:#000000"></img>
+					<div class="card-body  text-light">
+						<h1 class="card-title">Unreal Engine</h1>
+					</div>
+				</div>
+			</div>
+			
+			<div class= "col-sm-4 d-flex border border-warning p-1">
+				<div class="card  text-center mb-4 border-0 mx-auto" style="background-color:#000000">
+					<img src="pics/unity.png" class="card-img-top mx-auto"style=" width: 10rem; height: 9rem;background-color:#000000"></img>
+					<div class="card-body text-light">
+						<h1 class="card-title ">Unity</h1>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<br/>
+	<br/>
+	
+	<!-- contains the load_all() function that calls the other functions whenever the page loads -->
+	<script src="load.js">
+    </script>
+	
+	<!-- contains the script for the typing effect in the navbar -->
+	<script src="auto_gen_text.js">
+    </script>
+	
+	<!-- checks what font to load -->
+	<script src="font_load.js">
+    </script>
+	
+	<!-- contains the blinking script that creates a typing effect -->
+	<script src="blink.js">
+    </script>
+	
+	<!-- script that changes the font -->
+	<script src="change_font.js">
+    </script>
+	
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ" crossorigin="anonymous">
+</script>
+
+</body>
+</html>
